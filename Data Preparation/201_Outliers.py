@@ -5,17 +5,9 @@
 ###################################
 
 import pandas as pd 
-
-my_df = pd.DataFrame({"input1" : [15,41,44,47,50,53,56,59,99],
-                      "input2" : [29,41,44,47,50,53,56,59,66]})
-
-
-# Box Plot Approach
-
-my_df.plot(kind="box",vert=False)
-
 outlier_columns =["input1","input2"]
 
+#  Box Plot approach
 
 for column in outlier_columns:
     
@@ -30,6 +22,15 @@ for column in outlier_columns:
     print(f"{len(outliers)} Outliers dectected in column {column}")
     
     my_df.drop(outliers,inplace=True)
+my_df = pd.DataFrame({"input1" : [15,41,44,47,50,53,56,59,99],
+                      "input2" : [29,41,44,47,50,53,56,59,66]})
+
+
+# Box Plot Approach
+
+my_df.plot(kind="box",vert=False)
+
+
     
     
     

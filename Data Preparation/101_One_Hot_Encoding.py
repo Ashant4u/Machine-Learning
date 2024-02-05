@@ -28,7 +28,7 @@ X_new = pd.concat([X.reset_index(drop=True),encoder_vars_df.reset_index(drop=Tru
 
 
 #Remvoe Dummy Variable Trap
-
+categorical_vars = ["input2","input3"]
 
 one_hot_encoder = OneHotEncoder(sparse=False,drop="first")
 
